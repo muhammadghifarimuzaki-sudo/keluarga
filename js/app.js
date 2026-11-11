@@ -199,6 +199,27 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // Mobile Thumb Chips Interaction (Touch-friendly on smartphone)
+  const mobileThumbChips = document.querySelectorAll('.mobile-thumb-chip');
+  mobileThumbChips.forEach(chip => {
+    chip.addEventListener('click', () => {
+      mobileThumbChips.forEach(c => c.classList.remove('active'));
+      chip.classList.add('active');
+
+      const src = chip.getAttribute('data-src');
+      const caption = chip.getAttribute('data-caption');
+      if (heroFeaturedImg && src) {
+        heroFeaturedImg.src = src;
+        if (heroFeaturedCaption && caption) {
+          heroFeaturedCaption.textContent = caption;
+        }
+        triggerAudioChime(620, 'sine', 0.12);
+        const rect = chip.getBoundingClientRect();
+        triggerHeartBurst(rect.left + rect.width / 2, rect.top);
+      }
+    });
+  });
+
   // =========================================================================
   // 7. ANGGOTA KELUARGA (FILTER & PROFIL MODAL)
   // =========================================================================
