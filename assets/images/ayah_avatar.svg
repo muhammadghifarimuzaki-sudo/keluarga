@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4f46e5" />
+      <stop offset="100%" stop-color="#0284c7" />
+    </linearGradient>
+    <linearGradient id="skinGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fed7aa" />
+      <stop offset="100%" stop-color="#fdba74" />
+    </linearGradient>
+    <linearGradient id="shirtGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b" />
+      <stop offset="100%" stop-color="#0f172a" />
+    </linearGradient>
+  </defs>
+  <rect width="400" height="400" rx="32" fill="url(#bgGrad)" />
+  <!-- Pattern rings -->
+  <circle cx="200" cy="200" r="160" fill="none" stroke="rgba(255,255,255,0.12)" stroke-width="4" stroke-dasharray="8 8" />
+  
+  <!-- Silhouette / Father Avatar -->
+  <g transform="translate(0, 20)">
+    <!-- Shoulders / Body -->
+    <path d="M 100 380 C 100 300, 140 260, 200 260 C 260 260, 300 300, 300 380 Z" fill="url(#shirtGrad)" />
+    <!-- Collar & Tie/Batik detail -->
+    <path d="M 175 260 L 200 300 L 225 260 Z" fill="#e2e8f0" />
+    <path d="M 195 295 L 205 295 L 208 380 L 192 380 Z" fill="#f59e0b" />
+    
+    <!-- Neck -->
+    <rect x="180" y="210" width="40" height="55" rx="8" fill="url(#skinGrad)" />
+    
+    <!-- Head -->
+    <ellipse cx="200" cy="165" rx="55" ry="68" fill="url(#skinGrad)" />
+    
+    <!-- Hair -->
+    <path d="M 142 160 C 142 105, 170 90, 200 90 C 235 90, 258 105, 258 160 C 255 130, 230 115, 200 115 C 168 115, 145 130, 142 160 Z" fill="#1e1b18" />
+    
+    <!-- Glasses -->
+    <rect x="156" y="145" width="34" height="24" rx="6" fill="none" stroke="#334155" stroke-width="4" />
+    <rect x="210" y="145" width="34" height="24" rx="6" fill="none" stroke="#334155" stroke-width="4" />
+    <line x1="190" y1="157" x2="210" y2="157" stroke="#334155" stroke-width="4" />
+    
+    <!-- Eyes -->
+    <circle cx="173" cy="157" r="4" fill="#0f172a" />
+    <circle cx="227" cy="157" r="4" fill="#0f172a" />
+    
+    <!-- Smile & Moustache -->
+    <path d="M 185 190 Q 200 198 215 190" stroke="#0f172a" stroke-width="3" fill="none" stroke-linecap="round" />
+    <path d="M 178 185 Q 200 178 222 185" stroke="#334155" stroke-width="3" fill="none" stroke-linecap="round" />
+  </g>
+  
+  <!-- Warm glow badge -->
+  <g transform="translate(290, 40)">
+    <circle cx="0" cy="0" r="28" fill="#f59e0b" opacity="0.95" />
+    <text x="0" y="7" font-family="sans-serif" font-size="20" text-anchor="middle" fill="#ffffff">👑</text>
+  </g>
+</svg>

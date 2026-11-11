@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Keluarga Kami - Harmoni, Kasih, & Kenangan Abadi</title>
+  <meta name="description" content="Portofolio interaktif keluarga kami: merayakan kebersamaan, kisah perjalanan, galeri momen berharga, dan doa yang menyatukan hati.">
+  
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏡</text></svg>">
+
+  <!-- Google Fonts: Playfair Display & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;0,800;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Alex+Brush&display=swap" rel="stylesheet">
+  
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-theme="warm-light">
+  <!-- Decorative Background Glows -->
+  <div class="ambient-glow glow-1"></div>
+  <div class="ambient-glow glow-2"></div>
+  <div class="ambient-glow glow-3"></div>
+
+  <!-- HEADER / NAVBAR -->
+  <header class="site-header" id="header">
+    <div class="container nav-container">
+      <a href="#hero" class="brand-logo" aria-label="Beranda Keluarga Kami">
+        <span class="brand-icon">🏡</span>
+        <div class="brand-text">
+          <span class="family-name">Keluarga Kami</span>
+          <span class="tagline">Baitii Jannatii</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <nav class="desktop-nav" aria-label="Navigasi Utama">
+        <ul class="nav-menu">
+          <li><a href="#hero" class="nav-link active">Beranda</a></li>
+          <li><a href="#members" class="nav-link">Anggota</a></li>
+          <li><a href="#gallery" class="nav-link">Galeri Momen</a></li>
+          <li><a href="#timeline" class="nav-link">Garis Waktu</a></li>
+          <li><a href="#guestbook" class="nav-link">Pesan & Doa</a></li>
+        </ul>
+      </nav>
+
+      <!-- Nav Action Controls -->
+      <div class="nav-controls">
+        <!-- Relaxing Ambient Chime / Music -->
+        <button id="musicToggleBtn" class="control-btn" title="Putar Musik Akustik Hangat" aria-label="Musik Latar">
+          <span class="btn-icon">🎵</span>
+          <span class="music-label">Musik</span>
+        </button>
+
+        <!-- Theme Toggle -->
+        <button id="themeToggleBtn" class="control-btn" title="Ganti Tema (Hangat / Malam)" aria-label="Ganti Tema">
+          <span class="btn-icon theme-icon">☀️</span>
+        </button>
+
+        <!-- Mobile Hamburger -->
+        <button id="mobileMenuBtn" class="mobile-toggle" aria-label="Buka Menu" aria-expanded="false">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div class="mobile-nav-drawer" id="mobileDrawer">
+      <ul class="mobile-menu-links">
+        <li><a href="#hero" class="mobile-link">Beranda</a></li>
+        <li><a href="#members" class="mobile-link">Anggota Keluarga</a></li>
+        <li><a href="#gallery" class="mobile-link">Galeri Momen</a></li>
+        <li><a href="#timeline" class="mobile-link">Garis Waktu</a></li>
+        <li><a href="#guestbook" class="mobile-link">Pesan & Doa</a></li>
+      </ul>
+      <div class="drawer-footer">
+        <p class="drawer-quote">"Rumah bukan hanya sekadar tempat tinggal, melainkan tempat cinta dan doa berlabuh."</p>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero-section" id="hero">
+      <div class="container hero-grid">
+        <!-- Hero Text & Quotes -->
+        <div class="hero-content">
+          <div class="hero-badge">
+            <span class="pulse-dot"></span>
+            <span>Ruang Hangat Cinta & Kebersamaan</span>
+          </div>
+          <h1 class="hero-title">
+            Rumah Tempat <span class="highlight">Hati Berpulang</span>, Kasih yang Tak Pernah Pudar
+          </h1>
+          <p class="hero-desc">
+            Selamat datang di sudut digital keluarga kami. Di sinilah tawa direkam, doa dipanjatkan, dan jejak langkah kebersamaan kami abadikan dengan penuh rasa syukur.
+          </p>
+
+          <!-- Interactive Quote Box -->
+          <div class="quote-card-interactive" id="quoteCard">
+            <div class="quote-icon">❝</div>
+            <p class="quote-text" id="quoteText">
+              "Keluarga adalah kompas yang memandu jalan kita. Mereka adalah inspirasi untuk mencapai ketinggian, dan kenyamanan saat kita sesekali goyah."
+            </p>
+            <div class="quote-footer">
+              <span class="quote-author" id="quoteAuthor">— Nilai Kehidupan Keluarga</span>
+              <button class="quote-refresh-btn" id="nextQuoteBtn" title="Ganti Kutipan Hangat">
+                <span class="refresh-icon">🔄</span> Kutipan Lain
+              </button>
+            </div>
+          </div>
+
+          <!-- Hero Buttons -->
+          <div class="hero-actions">
+            <a href="#members" class="btn btn-primary">
+              <span>Kenali Kami</span>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+            <a href="#guestbook" class="btn btn-secondary">
+              <span>Kirimkan Doa</span>
+              <span class="btn-emoji">🤲</span>
+            </a>
+          </div>
+
+          <!-- Family Stats Counter -->
+          <div class="hero-stats">
+            <div class="stat-item">
+              <span class="stat-number" data-target="20">0</span><span class="stat-plus">+</span>
+              <span class="stat-label">Tahun Kebersamaan</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+              <span class="stat-number" data-target="4">0</span>
+              <span class="stat-label">Jiwa Saling Menguatkan</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+              <span class="stat-number" id="statsPrayers">12</span><span class="stat-plus">+</span>
+              <span class="stat-label">Untaian Doa & Pesan</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Visual Showcase -->
+        <div class="hero-visual">
+          <div class="hero-collage">
+            <!-- Main Hero Card: Family Moments -->
+            <div class="collage-card main-card">
+              <img src="assets/images/ayah.jpg" alt="Foto Ayah di Pantai" class="hero-img main-img" id="heroFeaturedImg">
+              <div class="card-overlay">
+                <span class="overlay-tag">Momen Berharga</span>
+                <p class="overlay-caption" id="heroFeaturedCaption">Senja di Tepi Pantai — Menatap Masa Depan Penuh Syukur</p>
+              </div>
+            </div>
+
+            <!-- Floating Mini Card 1: Ibu -->
+            <div class="collage-card mini-card mini-1" data-caption="Senyuman Ibu, Penyejuk Seluruh Rumah">
+              <img src="assets/images/ibu.jpg" alt="Ibu Tersenyum">
+              <div class="mini-badge">
+                <span class="badge-icon">💖</span> Bunda
+              </div>
+            </div>
+
+            <!-- Floating Mini Card 2: Anak Pertama (Putra Sulung) -->
+            <div class="collage-card mini-card mini-2" data-caption="Putra Sulung — Tegap, Berwibawa & Penuh Tanggung Jawab">
+              <img src="assets/images/anak_sulung.jpg" alt="Putra Sulung">
+              <div class="mini-badge">
+                <span class="badge-icon">👔</span> Mas Sulung
+              </div>
+            </div>
+
+            <!-- Floating Mini Card 3: Anak Kedua (Putra Kedua) -->
+            <div class="collage-card mini-card mini-3" data-caption="Putra Kedua — Santun, Bersahaja & Tekun Menuntut Ilmu">
+              <img src="assets/images/anak_kedua.jpg" alt="Putra Kedua">
+              <div class="mini-badge">
+                <span class="badge-icon">📖</span> Mas Kedua
+              </div>
+            </div>
+
+            <!-- Floating Decorative Stamp -->
+            <div class="family-stamp">
+              <div class="stamp-inner">
+                <span class="stamp-star">★</span>
+                <span>BAITII JANNATII</span>
+                <span class="stamp-star">★</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION: ANGGOTA KELUARGA (FAMILY MEMBERS) -->
+    <section class="section members-section" id="members">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="section-subtitle">Pilar Kehangatan</div>
+          <h2 class="section-title">Anggota Keluarga Kami</h2>
+          <p class="section-desc">
+            Empat jiwa dengan karakter dan mimpi yang berbeda, namun selalu disatukan oleh rasa cinta, saling menghormati, dan kehangatan rumah.
+          </p>
+        </div>
+
+        <!-- Role Filter Tabs -->
+        <div class="member-tabs">
+          <button class="member-tab active" data-filter="all">Semua Anggota</button>
+          <button class="member-tab" data-filter="parents">Orang Tua</button>
+          <button class="member-tab" data-filter="children">Anak-Anak</button>
+        </div>
+
+        <!-- Member Cards Grid -->
+        <div class="members-grid" id="membersGrid">
+          
+          <!-- Card 1: Ayah -->
+          <article class="member-card" data-category="parents" data-member="ayah">
+            <div class="card-media">
+              <img src="assets/images/ayah.jpg" alt="Foto Ayah" class="member-photo" loading="lazy">
+              <span class="member-role-badge badge-ayah">
+                <span>🛡️</span> Kepala Keluarga
+              </span>
+              <button class="expand-profile-btn" title="Lihat Profil Lengkap" aria-label="Buka profil Ayah">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+              </button>
+            </div>
+            <div class="card-body">
+              <div class="member-header">
+                <h3 class="member-name">Ayah Tercinta</h3>
+                <span class="member-nickname">"Pelindung & Nahkoda"</span>
+              </div>
+              <p class="member-quote">
+                "Bekerja keras dalam diam, biarkan doa dan keberhasilan keluarga yang berbicara."
+              </p>
+              <div class="member-details">
+                <div class="detail-row">
+                  <span class="detail-label">Peran:</span>
+                  <span class="detail-val">Pemimpin, Penasihat & Teladan</span>
+                </div>
+                <div class="detail-row">
+                  <span class="detail-label">Hobi:</span>
+                  <div class="tags-container">
+                    <span class="tag">🌊 Wisata Pantai</span>
+                    <span class="tag">☕ Ngopi Senja</span>
+                    <span class="tag">🚗 Berkelana</span>
+                  </div>
+                </div>
+              </div>
+              <button class="btn btn-outline btn-sm show-modal-trigger" data-id="ayah">
+                Fakta Menarik & Kisah
+              </button>
+            </div>
+          </article>
+
+          <!-- Card 2: Ibu -->
+          <article class="member-card" data-category="parents" data-member="ibu">
+            <div class="card-media">
+              <img src="assets/images/ibu.jpg" alt="Foto Ibu" class="member-photo" loading="lazy">
+              <span class="member-role-badge badge-ibu">
+                <span>💖</span> Ibu / Ratu Rumah
+              </span>
+              <button class="expand-profile-btn" title="Lihat Profil Lengkap" aria-label="Buka profil Ibu">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+              </button>
+            </div>
+            <div class="card-body">
+              <div class="member-header">
+                <h3 class="member-name">Ibu Tersayang</h3>
+                <span class="member-nickname">"Jantung Rumah & Penyejuk Hati"</span>
+              </div>
+              <p class="member-quote">
+                "Tiada hari yang terlewat tanpa menyebut nama anak-anak dalam setiap sujud doa."
+              </p>
+              <div class="member-details">
+                <div class="detail-row">
+                  <span class="detail-label">Peran:</span>
+                  <span class="detail-val">Pendidik Utama, Penguat & Pendoa</span>
+                </div>
+                <div class="detail-row">
+                  <span class="detail-label">Hobi:</span>
+                  <div class="tags-container">
+                    <span class="tag">🍲 Masakan Rumahan</span>
+                    <span class="tag">📖 Membaca Al-Qur'an</span>
+                    <span class="tag">🌱 Merawat Bunga</span>
+                  </div>
+                </div>
+              </div>
+              <button class="btn btn-outline btn-sm show-modal-trigger" data-id="ibu">
+                Fakta Menarik & Kisah
+              </button>
+            </div>
+          </article>
+
+          <!-- Card 3: Anak Pertama (Putra Sulung) -->
+          <article class="member-card" data-category="children" data-member="anak1">
+            <div class="card-media">
+              <img src="assets/images/anak_sulung.jpg" alt="Foto Putra Sulung" class="member-photo" loading="lazy">
+              <span class="member-role-badge badge-anak1">
+                <span>👔</span> Putra Sulung
+              </span>
+              <button class="expand-profile-btn" title="Lihat Profil Lengkap" aria-label="Buka profil Putra Sulung">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+              </button>
+            </div>
+            <div class="card-body">
+              <div class="member-header">
+                <h3 class="member-name">Putra Sulung</h3>
+                <span class="member-nickname">"Si Mandiri, Berwibawa & Penuh Tanggung Jawab"</span>
+              </div>
+              <p class="member-quote">
+                "Menjadi anak pertama adalah tentang belajar menjadi teladan yang kokoh bagi adik dan kebanggaan orang tua."
+              </p>
+              <div class="member-details">
+                <div class="detail-row">
+                  <span class="detail-label">Peran:</span>
+                  <span class="detail-val">Harapan Keluarga, Teladan Adik & Pembelajar Gigih</span>
+                </div>
+                <div class="detail-row">
+                  <span class="detail-label">Hobi:</span>
+                  <div class="tags-container">
+                    <span class="tag">👔 Studi Profesional</span>
+                    <span class="tag">💼 Kepemimpinan</span>
+                    <span class="tag">📈 Pengembangan Diri</span>
+                  </div>
+                </div>
+              </div>
+              <button class="btn btn-outline btn-sm show-modal-trigger" data-id="anak1">
+                Fakta Menarik & Kisah
+              </button>
+            </div>
+          </article>
+
+          <!-- Card 4: Anak Kedua (Putra Kedua) -->
+          <article class="member-card" data-category="children" data-member="anak2">
+            <div class="card-media">
+              <img src="assets/images/anak_kedua.jpg" alt="Foto Putra Kedua" class="member-photo" loading="lazy">
+              <span class="member-role-badge badge-anak2">
+                <span>📖</span> Putra Kedua
+              </span>
+              <button class="expand-profile-btn" title="Lihat Profil Lengkap" aria-label="Buka profil Putra Kedua">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+              </button>
+            </div>
+            <div class="card-body">
+              <div class="member-header">
+                <h3 class="member-name">Putra Kedua</h3>
+                <span class="member-nickname">"Santun, Bersahaja & Tekun Menuntut Ilmu"</span>
+              </div>
+              <p class="member-quote">
+                "Masa muda adalah waktu terbaik untuk menuntut ilmu seluas samudra dan menjaga kebaikan hati."
+              </p>
+              <div class="member-details">
+                <div class="detail-row">
+                  <span class="detail-label">Peran:</span>
+                  <span class="detail-val">Penyejuk Rumah, Pendengar Baik & Santun</span>
+                </div>
+                <div class="detail-row">
+                  <span class="detail-label">Hobi:</span>
+                  <div class="tags-container">
+                    <span class="tag">📚 Membaca Kitab/Buku</span>
+                    <span class="tag">🎧 Kajian & Podcast</span>
+                    <span class="tag">🌱 Keseharian Damai</span>
+                  </div>
+                </div>
+              </div>
+              <button class="btn btn-outline btn-sm show-modal-trigger" data-id="anak2">
+                Fakta Menarik & Kisah
+              </button>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION: GALERI MOMEN / KENANGAN -->
+    <section class="section gallery-section" id="gallery">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="section-subtitle">Album Abadi</div>
+          <h2 class="section-title">Galeri Momen Berharga</h2>
+          <p class="section-desc">
+            Kumpulan potret kilas balik yang melukiskan suka, duka, canda tawa, serta kekompakan keluarga dalam setiap fase kehidupan.
+          </p>
+        </div>
+
+        <!-- Gallery Controls: Filters + Add Memory Button -->
+        <div class="gallery-controls-bar">
+          <div class="gallery-filters" id="galleryFilters">
+            <button class="filter-btn active" data-category="all">Semua Momen</button>
+            <button class="filter-btn" data-category="sekolah">Masa Sekolah & Cita</button>
+            <button class="filter-btn" data-category="keluarga">Keseharian & Doa</button>
+            <button class="filter-btn" data-category="alam">Wisata & Alam</button>
+          </div>
+
+          <button class="btn btn-secondary btn-sm" id="openUploadModalBtn">
+            <span>+ Tambah Kenangan</span>
+          </button>
+        </div>
+
+        <!-- Gallery Grid -->
+        <div class="gallery-grid" id="galleryGrid">
+          <!-- Item 1: Ayah di Pantai -->
+          <div class="gallery-item" data-category="alam" data-title="Senja Teduh di Tepi Pantai" data-date="Wisata Alam" data-desc="Menikmati gemuruh ombak dan angin sepoi-sepoi pantai bersama Ayah yang selalu mengajarkan ketenangan jiwa.">
+            <div class="item-inner">
+              <img src="assets/images/ayah.jpg" alt="Ayah di Pantai" loading="lazy">
+              <div class="gallery-badge">Wisata & Alam</div>
+              <div class="gallery-overlay">
+                <span class="overlay-icon">🔍</span>
+                <h4 class="overlay-title">Senja Teduh di Tepi Pantai</h4>
+                <p class="overlay-meta">Momen Refleksi & Syukur</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 2: Ibu Tersenyum Hangat -->
+          <div class="gallery-item" data-category="keluarga" data-title="Senyum Penuh Kasih Ibu" data-date="Keseharian Hangat" data-desc="Potret Ibu dengan senyum ramah yang selalu menyambut pulang, ditemani Al-Qur'an dan suasana kamar yang syahdu.">
+            <div class="item-inner">
+              <img src="assets/images/ibu.jpg" alt="Ibu Tersenyum" loading="lazy">
+              <div class="gallery-badge">Keseharian & Doa</div>
+              <div class="gallery-overlay">
+                <span class="overlay-icon">🔍</span>
+                <h4 class="overlay-title">Senyum Penuh Kasih Ibu</h4>
+                <p class="overlay-meta">Keseharian Hangat</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 3: Langkah Cita Putra Sulung (Formal) -->
+          <div class="gallery-item" data-category="sekolah" data-title="Langkah Tegap Putra Sulung" data-date="Studi & Persiapan Karir" data-desc="Potret resmi dan penuh wibawa dari putra sulung dalam balutan setelan jas, siap melangkah menyongsong masa depan cerah.">
+            <div class="item-inner">
+              <img src="assets/images/anak_sulung.jpg" alt="Putra Sulung Berjas" loading="lazy">
+              <div class="gallery-badge">Masa Depan & Karir</div>
+              <div class="gallery-overlay">
+                <span class="overlay-icon">🔍</span>
+                <h4 class="overlay-title">Langkah Tegap Putra Sulung</h4>
+                <p class="overlay-meta">Masa Depan & Cita-Cita</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 4: Keseharian Santun Putra Kedua -->
+          <div class="gallery-item" data-category="keluarga" data-title="Rehat Santai & Menuntut Ilmu" data-date="Keseharian Putra Kedua" data-desc="Momen tenang putra kedua saat rehat belajar di rumah bersama buku bacaan, senantiasa menjaga ketekunan dan nilai-nilai kebaikan keluarga.">
+            <div class="item-inner">
+              <img src="assets/images/anak_kedua.jpg" alt="Putra Kedua Belajar" loading="lazy">
+              <div class="gallery-badge">Keseharian & Doa</div>
+              <div class="gallery-overlay">
+                <span class="overlay-icon">🔍</span>
+                <h4 class="overlay-title">Rehat Santai & Menuntut Ilmu</h4>
+                <p class="overlay-meta">Keseharian Putra Kedua</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 5: Kenangan Bazar Pramuka Masa Kecil -->
+          <div class="gallery-item" data-category="sekolah" data-title="Bazar Ceria Pramuka SD" data-date="Nostalgia Masa Kecil" data-desc="Kenangan manis ketika anak-anak masih berseragam Pramuka, belajar berniaga minuman dingin dan saus cemilan dengan riang bersama kawan sebaya.">
+            <div class="item-inner">
+              <img src="assets/images/kenangan_sekolah.jpg" alt="Bazar Pramuka SD" loading="lazy">
+              <div class="gallery-badge">Masa Sekolah & Cita</div>
+              <div class="gallery-overlay">
+                <span class="overlay-icon">🔍</span>
+                <h4 class="overlay-title">Bazar Ceria Pramuka SD</h4>
+                <p class="overlay-meta">Nostalgia Masa Kecil</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 6: Keseruan Bersama Teman di Ruang Kuliah -->
+          <div class="gallery-item" data-category="sekolah" data-title="Keseruan di Ruang Kuliah Bersama Teman" data-date="Dinamika Kampus & Sahabat" data-desc="Canda tawa dan momen kebersamaan ceria di ruang kelas perkuliahan bersama kawan-kawan seperjuangan menuntut ilmu.">
+            <div class="item-inner">
+              <img src="assets/images/kuliah_teman.jpg" alt="Keseruan Kuliah Bersama Teman" loading="lazy">
+              <div class="gallery-badge">Masa Sekolah & Cita</div>
+              <div class="gallery-overlay">
+                <span class="overlay-icon">🔍</span>
+                <h4 class="overlay-title">Keseruan di Ruang Kuliah Bersama Teman</h4>
+                <p class="overlay-meta">Dinamika Kampus & Sahabat</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION: GARIS WAKTU (TIMELINE / MILESTONE) -->
+    <section class="section timeline-section" id="timeline">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="section-subtitle">Jejak Langkah</div>
+          <h2 class="section-title">Garis Waktu Perjalanan Keluarga</h2>
+          <p class="section-desc">
+            Dari awal dua insan berikrar hingga kini mendampingi anak-anak tumbuh menggapai cita, setiap fase adalah anugerah terindah.
+          </p>
+        </div>
+
+        <div class="timeline-container">
+          <div class="timeline-line"></div>
+
+          <!-- Milestone 1 -->
+          <div class="timeline-item timeline-left">
+            <div class="timeline-dot">
+              <span>💍</span>
+            </div>
+            <div class="timeline-card">
+              <div class="timeline-year">Tahun 2004 - 2005</div>
+              <h3 class="timeline-title">Awal Langkah: Bersatunya Dua Hati</h3>
+              <p class="timeline-text">
+                Ayah dan Ibu mengikat janji suci pernikahan. Memulai pondasi rumah tangga beralaskan cinta, kesederhanaan, dan tekad bersama untuk membangun keluarga yang sakinah, mawaddah, warahmah.
+              </p>
+              <div class="timeline-tag">Awal Perjalanan</div>
+            </div>
+          </div>
+
+          <!-- Milestone 2 -->
+          <div class="timeline-item timeline-right">
+            <div class="timeline-dot">
+              <span>👶</span>
+            </div>
+            <div class="timeline-card">
+              <div class="timeline-year">Tahun 2007</div>
+              <h3 class="timeline-title">Cahaya Pertama: Lahirnya Putra Sulung</h3>
+              <p class="timeline-text">
+                Tangis pertama si buah hati menggemakan rasa syukur yang mendalam di rumah kami. Kehadirannya melipatgandakan keceriaan dan mengubah peran Ayah & Ibu menjadi orang tua sejati.
+              </p>
+              <div class="timeline-tag">Kelahiran Pertama</div>
+            </div>
+          </div>
+
+          <!-- Milestone 3 -->
+          <div class="timeline-item timeline-left">
+            <div class="timeline-dot">
+              <span>🌟</span>
+            </div>
+            <div class="timeline-card">
+              <div class="timeline-year">Tahun 2011</div>
+              <h3 class="timeline-title">Kebahagiaan Berlipat: Lahirnya Putra Kedua</h3>
+              <p class="timeline-text">
+                Rumah semakin ramai dan berwarna dengan kelahiran adik laki-laki. Suasana rumah dipenuhi celoteh riang, tawa bermain, dan indahnya persaudaraan sedarah.
+              </p>
+              <div class="timeline-tag">Lengkapnya Keluarga</div>
+            </div>
+          </div>
+
+          <!-- Milestone 4 -->
+          <div class="timeline-item timeline-right">
+            <div class="timeline-dot">
+              <span>🎒</span>
+            </div>
+            <div class="timeline-card">
+              <div class="timeline-year">Tahun 2017</div>
+              <h3 class="timeline-title">Masa Sekolah Ceria & Bazar Pramuka</h3>
+              <p class="timeline-text">
+                Masa-masa anak-anak aktif bersekolah. Belajar kemandirian lewat kegiatan Pramuka, bazar jajanan seru, serta perlombaan yang melatih keberanian dan kejujuran.
+              </p>
+              <div class="timeline-tag">Kemandirian & Prestasi</div>
+            </div>
+          </div>
+
+          <!-- Milestone 5 -->
+          <div class="timeline-item timeline-left">
+            <div class="timeline-dot">
+              <span>🏡</span>
+            </div>
+            <div class="timeline-card">
+              <div class="timeline-year">Tahun 2020 - 2022</div>
+              <h3 class="timeline-title">Saling Menguatkan di Masa Pandemi</h3>
+              <p class="timeline-text">
+                Menghadapi tantangan zaman bersama. Menghabiskan waktu lebih banyak di rumah, memperkuat ibadah berjamaah, mendampingi belajar daring, dan semakin menyadari betapa berharganya arti kesehatan dan kehadiran keluarga.
+              </p>
+              <div class="timeline-tag">Penguatan Ikatan</div>
+            </div>
+          </div>
+
+          <!-- Milestone 6 -->
+          <div class="timeline-item timeline-right">
+            <div class="timeline-dot">
+              <span>🎓</span>
+            </div>
+            <div class="timeline-card">
+              <div class="timeline-year">2024 - Sekarang & Masa Depan</div>
+              <h3 class="timeline-title">Menjemput Masa Depan & Mengukir Prestasi</h3>
+              <p class="timeline-text">
+                Anak-anak kini beranjak dewasa, menuntut ilmu di bangku pendidikan tinggi dan meraih mimpi masing-masing. Ayah dan Ibu senantiasa menjadi dermaga doa yang paling kokoh mengiringi setiap langkah.
+              </p>
+              <div class="timeline-tag">Merajut Harapan</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION: INTERACTIVE FAMILY TRIVIA (BONUS ENGAGEMENT) -->
+    <section class="section trivia-section">
+      <div class="container">
+        <div class="trivia-banner">
+          <div class="trivia-content">
+            <span class="trivia-badge">🎲 Tebak-Tebakan Keluarga</span>
+            <h3 class="trivia-title">Kuis Singkat: Seberapa Kenal Kamu dengan Keluarga Kami?</h3>
+            <p class="trivia-desc" id="triviaQuestion">
+              Pertanyaan: Siapa yang paling sering mengingatkan anak-anak untuk istirahat dan selalu menyiapkan makanan lezat di rumah?
+            </p>
+            <div class="trivia-options" id="triviaOptions">
+              <button class="trivia-btn" data-answer="false">Ayah</button>
+              <button class="trivia-btn" data-answer="true">Ibu Tercinta</button>
+              <button class="trivia-btn" data-answer="false">Anak Pertama</button>
+            </div>
+            <div class="trivia-feedback" id="triviaFeedback"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION: PESAN & DOA (GUESTBOOK / CONTACT) -->
+    <section class="section guestbook-section" id="guestbook">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="section-subtitle">Buku Tamu Kehangatan</div>
+          <h2 class="section-title">Untaian Pesan & Doa</h2>
+          <p class="section-desc">
+            Tinggalkan pesan, doa kebaikan, atau sapaan hangat untuk keluarga kami. Setiap kata baik Anda adalah energi dan berkah yang sangat berarti bagi kami.
+          </p>
+        </div>
+
+        <div class="guestbook-grid">
+          <!-- Form Card -->
+          <div class="guestbook-form-card">
+            <div class="card-title-group">
+              <h3 class="form-title">Tuliskan Doa & Doakan Kebaikan</h3>
+              <p class="form-sub">Pesan Anda akan langsung tampil di dinding doa keluarga.</p>
+            </div>
+
+            <form id="guestbookForm" class="guestbook-form" autocomplete="off">
+              <div class="form-group">
+                <label for="senderName" class="form-label">Nama Lengkap / Panggilan <span class="req">*</span></label>
+                <input type="text" id="senderName" class="form-input" placeholder="Misal: Paman Budi, Tante Ratna, Sahabat Dika" required maxlength="50">
+              </div>
+
+              <div class="form-group">
+                <label for="senderRelation" class="form-label">Hubungan / Kerabat <span class="req">*</span></label>
+                <select id="senderRelation" class="form-select" required>
+                  <option value="" disabled selected>Pilih Hubungan...</option>
+                  <option value="Keluarga Besar">Keluarga Besar</option>
+                  <option value="Sahabat Dekat">Sahabat Dekat</option>
+                  <option value="Tetangga / Warga">Tetangga / Warga</option>
+                  <option value="Teman Sekolah / Kuliah">Teman Sekolah / Kuliah</option>
+                  <option value="Rekan Kerja">Rekan Kerja</option>
+                  <option value="Tamu Kehormatan">Tamu Kehormatan / Lainnya</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label">Pilih Simbol Doa:</label>
+                <div class="emoji-picker-row">
+                  <label class="emoji-radio">
+                    <input type="radio" name="prayerEmoji" value="🤲" checked>
+                    <span class="emoji-box">🤲 Berkah</span>
+                  </label>
+                  <label class="emoji-radio">
+                    <input type="radio" name="prayerEmoji" value="❤️">
+                    <span class="emoji-box">❤️ Kasih</span>
+                  </label>
+                  <label class="emoji-radio">
+                    <input type="radio" name="prayerEmoji" value="🌸">
+                    <span class="emoji-box">🌸 Bahagia</span>
+                  </label>
+                  <label class="emoji-radio">
+                    <input type="radio" name="prayerEmoji" value="⭐">
+                    <span class="emoji-box">⭐ Sukses</span>
+                  </label>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="senderMessage" class="form-label">Pesan & Doa Tulus <span class="req">*</span></label>
+                <textarea id="senderMessage" class="form-textarea" rows="4" placeholder="Tuliskan ucapan selamat, doa kesehatan, kesuksesan, atau kenangan indah bersama keluarga kami..." required minlength="5" maxlength="400"></textarea>
+                <div class="char-count"><span id="charNum">0</span>/400 karakter</div>
+              </div>
+
+              <!-- Quick Template Buttons -->
+              <div class="quick-templates">
+                <span class="templates-label">Saran Cepat:</span>
+                <button type="button" class="quick-chip" data-text="Semoga keluarga ini senantiasa dilimpahi kesehatan, keberkahan rezeki, dan kebahagiaan abadi. Aamiin! 🤲">🤲 Doa Sehat & Berkah</button>
+                <button type="button" class="quick-chip" data-text="Keluarga yang sangat menginspirasi! Sukses selalu untuk Ayah, Ibu, dan anak-anak tercinta dalam meraih cita. ✨">✨ Keluarga Menginspirasi</button>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-block submit-btn" id="submitPrayerBtn">
+                <span>Kirimkan Pesan & Doa</span>
+                <span class="send-icon">💌</span>
+              </button>
+            </form>
+          </div>
+
+          <!-- Message List Wall -->
+          <div class="guestbook-wall">
+            <div class="wall-header">
+              <div class="wall-title-wrapper">
+                <h3 class="wall-title">Dinding Doa Terkumpul</h3>
+                <span class="wall-counter" id="totalPrayersBadge">5 Doa</span>
+              </div>
+              <div class="wall-actions">
+                <button id="resetWishesBtn" class="link-btn" title="Kembalikan data bawaan">Reset Contoh</button>
+              </div>
+            </div>
+
+            <!-- Messages Stream -->
+            <div class="messages-container" id="messagesContainer">
+              <!-- Dynamically populated from JS & LocalStorage -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <span>🏡</span>
+            <span class="footer-title">Keluarga Kami</span>
+          </div>
+          <p class="footer-tagline">
+            "Keluarga bukanlah sekadar hal penting, melainkan segalanya. Tempat cinta bermula dan tak pernah berakhir."
+          </p>
+        </div>
+
+        <div class="footer-links">
+          <h4 class="footer-heading">Navigasi Singkat</h4>
+          <ul>
+            <li><a href="#hero">Beranda</a></li>
+            <li><a href="#members">Pilar Keluarga</a></li>
+            <li><a href="#gallery">Album Kenangan</a></li>
+            <li><a href="#timeline">Perjalanan Hidup</a></li>
+            <li><a href="#guestbook">Kirimkan Doa</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-contact">
+          <h4 class="footer-heading">Rumah Hangat Kami</h4>
+          <p class="footer-info">📍 Indonesia</p>
+          <p class="footer-info">💌 keluarga.kami.bahagia@gmail.com</p>
+          <div class="footer-socials">
+            <span class="social-pill">🌿 Kedamaian</span>
+            <span class="social-pill">🤝 Kebersamaan</span>
+            <span class="social-pill">🤍 Kasih Sayang</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="copyright">
+          © 2026 <strong>Keluarga Kami</strong>. Dibuat dengan cinta, kehangatan, dan ketulusan.
+        </p>
+        <button id="backToTopBtn" class="back-to-top" title="Kembali ke atas">
+          ↑ Ke Atas
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- MODAL: DETAIL PROFIL ANGGOTA -->
+  <div class="modal-backdrop" id="memberModal" aria-hidden="true" role="dialog">
+    <div class="modal-card">
+      <button class="modal-close" id="closeMemberModalBtn" aria-label="Tutup Detail Profil">&times;</button>
+      <div class="modal-body" id="memberModalContent">
+        <!-- Injected via JavaScript -->
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL: LIGHTBOX GALERI FOTO -->
+  <div class="lightbox-backdrop" id="lightboxModal" aria-hidden="true">
+    <button class="lightbox-close" id="closeLightboxBtn" aria-label="Tutup Foto">&times;</button>
+    <button class="lightbox-nav prev" id="prevLightboxBtn" aria-label="Foto Sebelumnya">&#10094;</button>
+    <button class="lightbox-nav next" id="nextLightboxBtn" aria-label="Foto Berikutnya">&#10095;</button>
+    
+    <div class="lightbox-content">
+      <div class="lightbox-image-wrapper">
+        <img src="" alt="" id="lightboxImg">
+      </div>
+      <div class="lightbox-info">
+        <div class="lightbox-header-row">
+          <span class="lightbox-category" id="lightboxCategory">Kategori</span>
+          <span class="lightbox-date" id="lightboxDate">Tanggal/Momen</span>
+        </div>
+        <h3 class="lightbox-title" id="lightboxTitle">Judul Momen</h3>
+        <p class="lightbox-desc" id="lightboxDesc">Deskripsi lengkap momen ini bersama keluarga.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL: TAMBAH KENANGAN BARU (USER INTERACTION) -->
+  <div class="modal-backdrop" id="uploadModal" aria-hidden="true" role="dialog">
+    <div class="modal-card upload-modal-card">
+      <button class="modal-close" id="closeUploadModalBtn" aria-label="Tutup Dialog">&times;</button>
+      <div class="upload-modal-content">
+        <h3 class="upload-title">📸 Tambah Momen Kenangan Baru</h3>
+        <p class="upload-subtitle">Simpan momen baru ke galeri portofolio keluarga Anda.</p>
+
+        <form id="addMemoryForm" class="upload-form">
+          <div class="form-group">
+            <label class="form-label" for="memoryTitle">Judul Momen <span class="req">*</span></label>
+            <input type="text" id="memoryTitle" class="form-input" placeholder="Misal: Ulang Tahun Ibu ke-50" required>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="memoryCategory">Kategori Momen <span class="req">*</span></label>
+            <select id="memoryCategory" class="form-select" required>
+              <option value="keluarga">Keseharian & Doa</option>
+              <option value="alam">Wisata & Liburan</option>
+              <option value="sekolah">Masa Sekolah & Prestasi</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="memoryImageInput">Pilih Foto dari Perangkat <span class="req">*</span></label>
+            <input type="file" id="memoryImageInput" class="form-file-input" accept="image/*" required>
+            <div class="file-preview-container" id="filePreviewContainer" style="display:none;">
+              <img id="filePreviewImg" src="" alt="Pratinjau Foto" class="file-preview">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="memoryDesc">Cerita Singkat Momen</label>
+            <textarea id="memoryDesc" class="form-textarea" rows="3" placeholder="Ceritakan sedikit kenangan indah di balik foto ini..."></textarea>
+          </div>
+
+          <div class="upload-actions">
+            <button type="button" class="btn btn-outline" id="cancelUploadBtn">Batal</button>
+            <button type="submit" class="btn btn-primary">Simpan ke Galeri</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- FLOATING CONGRATULATION / CONFETTI CONTAINER -->
+  <div id="confettiContainer" class="confetti-container" pointer-events="none"></div>
+
+  <!-- JAVASCRIPT -->
+  <script src="js/app.js"></script>
+</body>
+</html>
